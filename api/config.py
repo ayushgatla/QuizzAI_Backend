@@ -11,8 +11,8 @@ class Config:
     APP_NAME = os.getenv("APP_NAME", "QuizzAI")
     
   
-    HOST = "127.0.0.1"  
-    PORT = 8080
+    HOST = os.getenv("HOST", "0.0.0.0")  
+    PORT = int(os.getenv("PORT", 8080))
     
   
     MAX_PDF_SIZE = int(os.getenv("MAX_PDF_SIZE", 10 * 1024 * 1024))  # 10MB default
@@ -56,5 +56,6 @@ class Config:
                 "http://localhost:5501",
                 "http://127.0.0.1:5500",
                 "http://127.0.0.1:5501",
-                
+                "https://lustrous-marigold-57ed9f.netlify.app",
+                os.getenv("FRONTEND_URL"),
             ]
