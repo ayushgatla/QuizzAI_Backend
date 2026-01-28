@@ -45,6 +45,10 @@ app.add_middleware(
 )
 from pydantic import BaseModel
 
+@app.post("/health")
+def health():
+    return {"status": "healthy"}
+
 class ChatRequest(BaseModel):
     prompt: str
 
