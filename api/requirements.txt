@@ -1,5 +1,4 @@
 # Python 3.11 required
-python_requires>=3.11
 fastapi==0.104.1
 uvicorn[standard]==0.24.0
 python-dotenv==1.0.0
